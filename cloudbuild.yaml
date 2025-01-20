@@ -5,7 +5,7 @@ steps:
       [
         "build",
         "-t",
-        "asia-northeast1-docker.pkg.dev/CICD/my-docker-repo/my-image:latest",
+        "asia-northeast1-docker.pkg.dev/cicd/my-docker-repo/my-image:latest",
         ".",
       ]
   # Push the container image to Container Registry
@@ -13,7 +13,7 @@ steps:
     args:
       [
         "push",
-        "asia-northeast1-docker.pkg.dev/CICD/my-docker-repo/my-image",
+        "asia-northeast1-docker.pkg.dev/cicd/my-docker-repo/my-image",
       ]
   # Deploy container image to Cloud Run
   - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
@@ -24,7 +24,7 @@ steps:
         "deploy",
         "my-image",
         "--image",
-        "asia-northeast1-docker.pkg.dev/CICD/my-docker-repo/my-image:latest",
+        "asia-northeast1-docker.pkg.dev/cicd/my-docker-repo/my-image:latest",
         "--platform",
         "managed",
         "--allow-unauthenticated",
@@ -39,6 +39,6 @@ steps:
 
   # bucket
 logsBucket: "sample_bucket_cicd"
-serviceAccount: "projects/CICD/serviceAccounts/ca-build-cicd@CICD.iam.gserviceaccount.com"
+serviceAccount: "projects/cicd/serviceAccounts/ca-build-cicd@cicd.iam.gserviceaccount.com"
 options:
   logging: GCS_ONLY

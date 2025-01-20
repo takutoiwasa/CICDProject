@@ -37,6 +37,7 @@ steps:
         "--quiet"
       ]
 
+  # bucket
 logsBucket: "sample_bucket_cicd"
 serviceAccount: "projects/CICD/serviceAccounts/ca-build-cicd@CICD.iam.gserviceaccount.com"
 options:

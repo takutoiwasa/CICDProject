@@ -39,6 +39,6 @@ steps:
 
   # bucket
 logsBucket: "sample_bucket_cicd"
-serviceAccount: "projects/cicd/serviceAccounts/ca-build-cicd@cicd.iam.gserviceaccount.com"
+serviceAccount: "projects/cicd/serviceAccounts/sa-build-cicd@cicd-448406.iam.gserviceaccount.com"
 options:
   logging: GCS_ONLY

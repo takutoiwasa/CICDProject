@@ -33,7 +33,7 @@ steps:
         "--region",
         "asia-northeast1",
         "--project",
-        "CICD",
+        "cicd-448406",
         "--quiet"
       ]
 

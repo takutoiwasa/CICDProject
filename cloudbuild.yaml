@@ -5,7 +5,7 @@ steps:
       [
         "build",
         "-t",
-        "asia-northeast1-docker.pkg.dev/cicd/my-docker-repo/my-image:latest",
+        "us-central1-docker.pkg.dev/cicd-448406/cloud-run-source-deploy/cicdproject/cicdproject:latest",
         ".",
       ]
   # Push the container image to Container Registry
@@ -13,7 +13,7 @@ steps:
     args:
       [
         "push",
-        "asia-northeast1-docker.pkg.dev/cicd/my-docker-repo/my-image",
+        "us-central1-docker.pkg.dev/cicd-448406/cloud-run-source-deploy/cicdproject/cicdproject:latest",
       ]
   # Deploy container image to Cloud Run
   - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
@@ -24,7 +24,7 @@ steps:
         "deploy",
         "my-image",
         "--image",
-        "asia-northeast1-docker.pkg.dev/cicd/my-docker-repo/my-image:latest",
+        "us-central1-docker.pkg.dev/cicd-448406/cloud-run-source-deploy/cicdproject/cicdproject:latest",
         "--platform",
         "managed",
         "--allow-unauthenticated",
